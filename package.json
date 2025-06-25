@@ -1,13 +1,12 @@
 {
   "name": "ecommerce-v1",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon ./app.js"
   },
-  "author": "samarth vohra",
+  "author": "Love Sharma",
   "license": "ISC",
   "dependencies": {
     "connect-flash": "^0.1.1",
@@ -29,5 +28,7 @@
     "request": "^2.88.2",
     "sanitize-html": "^2.11.0",
     "uuid": "^9.0.0"
-  }
+  },
+  "keywords": [],
+  "description": ""
 }
