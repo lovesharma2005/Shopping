@@ -1,6 +1,6 @@
-if(process.env.NODE_ENV !== 'production'){
-    require('dotenv').config();
-}
+// if(process.env.NODE_ENV !== 'production'){
+//     require('dotenv').config();
+// }
 
 const express = require('express');
 const app = express();
@@ -15,7 +15,7 @@ const LocalStrategy =  require('passport-local');
 const User = require('./models/User');
 const MongoStore = require('connect-mongo');
 
-const dbURL = process.env.dbURL || 'mongodb://localhost:27017/shopping';
+const dbURL ='mongodb://localhost:27017/shopping';
 
 mongoose.set('strictQuery', true);
 mongoose.connect(dbURL)
@@ -30,7 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 
-let secret = process.env.SECRET || 'thisismycrazylife';
+let secret ='love';
 
 let store = MongoStore.create({
     secret:secret,
