@@ -13,7 +13,6 @@ const flash = require('connect-flash');
 const passport =  require('passport');
 const LocalStrategy =  require('passport-local');
 const User = require('./models/User');
-const seedDB = require('./seed')
 const MongoStore = require('connect-mongo');
 
 const dbURL = process.env.dbURL || 'mongodb://localhost:27017/shopping';
@@ -71,8 +70,6 @@ app.use((req, res, next) => {
     res.locals.error = req.flash('error');
     next();
 })
-
-// seedDB();
 
 // Routes require
 const productRoutes = require('./routes/product');
